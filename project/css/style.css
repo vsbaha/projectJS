@@ -27,11 +27,15 @@
     font-size: 22px;
     height: 60px;
     width: fit-content;
-    background: var(--orange);
+    background: #910101;
     padding: 8px;
     color: white;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.logotype img {
+    width: 75px;
 }
 
 /* HEADER MENU */
