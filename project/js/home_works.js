@@ -26,6 +26,6 @@ const increment = () => {
 	if (currentLeftValue < 450) {
 		childBlock.style.left = currentLeftValue + 1 + 'px'
 		setTimeout(increment, 10)
-	} //else if (currentLeftValue)
+	}
 }
 increment()
