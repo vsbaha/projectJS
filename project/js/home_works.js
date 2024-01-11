@@ -59,7 +59,7 @@ let number = 0
 let intervalId
 
 start.onclick = () => {
-	start.setAttribute('disabled', 'true')
+	start.setAttribute('disabled', 'true')//если что я знаю другой способ но выбрал этот потому что он легче
 	start.style.cursor  = 'not-allowed'
 	intervalId = setInterval(() => {
 		number++
