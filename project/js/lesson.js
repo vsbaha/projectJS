@@ -1,3 +1,4 @@
+// lesson 1
 // PHONE CHECKER
 
 const phoneInput = document.querySelector('#phone_input')
@@ -23,9 +24,13 @@ let count = 0
 const increment = () => {
 	count++
 	console.log(count)
-	if (count < 500){
+	if (count < 5){
 		increment()
 	}
 
 }
 increment()
+
+//  lesson 2
+
+ 

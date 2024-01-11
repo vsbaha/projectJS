@@ -41,11 +41,12 @@
 .parent_block {
     height: 500px;
     width: 500px;
-    border: 1px solid var(--orange);
+    border: 5px dotted var(--orange);
     border-radius: 15px;
     position: relative;
     margin: 0 auto;
 }
+
 
 .child_block {
     position: absolute;
@@ -55,33 +56,12 @@
     height: 50px;
 }
 
-@keyframes rotateImage {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(-360deg);
-    }
-}
-
 .child_block img {
     width: 50px;
-    animation: rotateImage 2s linear infinite;
 }
 
 .inner_move_block {
     margin-top: 10px;
-}
-
-/*Моя часть*/
-
-.desc {
-    color: white;
-    margin-bottom: 30px;
-}
-
-.desc p {
-    margin-top: 15px;
 }
 /*----ANALOG CLOCK-----*/
 
