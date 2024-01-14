@@ -24,13 +24,67 @@ let count = 0
 const increment = () => {
 	count++
 	console.log(count)
-	if (count < 5){
+	if (count < 5) {
 		increment()
 	}
 
 }
 increment()
 
-//  lesson 2
+//  TAB SLIDER
 
- 
+const tabContents = document.querySelectorAll('.tab_content_block')
+const tabItems = document.querySelectorAll('.tab_content_item')
+const tabParent = document.querySelector('.tab_content_items')
+let intervalId
+
+const autoTab = (i = 0) => {
+	intervalId = setInterval(() => {
+		i++
+		if (i > tabItems.length - 1) {
+			i = 0
+		}
+		hideTabContent()
+		showTabContent(i)
+	}, 1000)
+}
+
+autoTab()
+
+const hideTabContent = () => {
+	tabContents.forEach((tabBlock) => {
+		tabBlock.style.display = 'none'
+	})
+	tabItems.forEach((tab) => {
+		tab.classList.remove('tab_content_item_active')
+	})
+}
+
+const showTabContent = (index = 0) => {
+	tabContents[index].style.display = 'block'
+	tabItems[index].classList.add('tab_content_item_active')
+}
+
+hideTabContent()
+showTabContent()
+
+tabParent.onclick = (e) => {
+	if (e.target.classList.contains('tab_content_item')) {
+		tabItems.forEach((tabItem, tabIndex) => {
+			if (e.target === tabItem) {
+				clearInterval(intervalId)
+				hideTabContent()
+				showTabContent(tabIndex)
+
+				// После остановки интервала, она запускается заново через 10 секунд
+				// Если этого не нужно было делать то можно просто убрать этот кусок кода ↓
+				setTimeout(() => {
+					autoTab(tabIndex)
+				}, 10000)
+			}
+		})
+	}
+}
+
+
+
