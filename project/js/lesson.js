@@ -46,7 +46,7 @@ const autoTab = (i = 0) => {
 		}
 		hideTabContent()
 		showTabContent(i)
-	}, 1000)
+	}, 3000)
 }
 
 autoTab()
@@ -61,7 +61,7 @@ const hideTabContent = () => {
 }
 
 const showTabContent = (index = 0) => {
-	tabContents[index].style.display = 'block'
+	tabContents[index].style.display = 'flex'
 	tabItems[index].classList.add('tab_content_item_active')
 }
 

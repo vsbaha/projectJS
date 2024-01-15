@@ -35,40 +35,42 @@
 }
 
 .tab_content_block {
-    width: 700px;
-    border: 1px solid var(--orange);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    height: 170px;
+    border: 1px solid orange;
+    border-radius: 15px;
+    padding: 15px;
 }
 
-.tab_content_block p {
+.tab_contents_block img {
+    height: 250px;
+    width: 250px;
+    margin-right: 50px;
+}
+
+.tab_contents_block .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: white;
-    margin-top: 10px;
-    text-align: justify;
 }
 
 .tab_content_items {
-    width: 400px;
     display: flex;
-    flex-direction: column;
-    row-gap: 5px;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: 50px;
+    flex-wrap: wrap;
 }
 
 .tab_content_item {
     padding: 10px;
-    height: 30px;
     color: white;
     border: 1px solid var(--orange);
+    border-radius: 30px;
     text-align: center;
     font-size: 20px;
     cursor: pointer;
     display: grid;
+    white-space: nowrap;
     place-content: center;
 }
 
@@ -80,10 +82,13 @@
 }
 
 .tab_contents_block {
+    width: auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
+    margin: 50px auto 0;
+    padding: 50px;
 }
 
 /*------CARD SWITCHER------*/
