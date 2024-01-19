@@ -1,0 +1,8 @@
+{
+  "name": "geeks",
+  "foundingYears": 2018,
+  "directions": ["frontend", "backend","ux/ui", "android", "ios", "qa", "pm"],
+  "branches": 3,
+  "address": {"street": "Ibraimova 103",
+    "building": "Victory"}
+}
