@@ -17,17 +17,34 @@ phoneButton.onclick = () => {
 	}
 }
 
-// Recursion
 
-let count = 0
+// CONVERTER
 
-const increment = () => {
-	count++
-	console.log(count)
-	if (count < 5) {
-		increment()
+somInput = document.querySelector('#som')
+usdInput = document.querySelector('#usd')
+
+const converter = (element, targetElement, currentValue) => {
+	element.oninput = () => {
+		const request = new XMLHttpRequest()
+		request.open('GET', '../json/converter.json')
+		request.setRequestHeader('Content-type', 'application/json')
+		request.send()
+		request.onload = () => {
+			const response = JSON.parse(request.response)
+			switch (currentValue) {
+				case 'som':
+					targetElement.value = (element.value / response.usd).toFixed(2)
+					break
+				case 'usd':
+					targetElement.value = (element.value * response.usd).toFixed(2)
+					break
+				default:
+					break
+			}
+			element.value === '' && (targetElement.value = '')
+		}
 	}
-
 }
-increment()
 
+converter(somInput, usdInput, 'som')
+converter(usdInput, somInput, 'usd')

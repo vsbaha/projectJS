@@ -146,7 +146,7 @@ const getPersonData = () => {
 
     request.addEventListener('load', () => {
         const personsData = JSON.parse(request.response)
-        console.log(personsData)
+        console.log(typeof personsData)
         const setPerson = (i = 0) => {
             personsSlides.forEach((currentSlide) => {
                 currentSlide.querySelector("h4").innerHTML = personsData[i].name
@@ -208,3 +208,5 @@ personPrev.onclick = () => {
 }
 
 autoPersonSlider(personIndex)
+
+console.log(typeof request)
